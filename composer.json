@@ -1,0 +1,27 @@
+{
+  "name": "cube-group/myaf-utils",
+  "description": "utils",
+  "keywords": [
+    "base"
+  ],
+  "authors": [
+    {
+      "name": "linyang",
+      "email": "linyangflash@163.com"
+    },
+    {
+      "name": "chenqionghe",
+      "email": "chenqionghe@sina.com"
+    }
+  ],
+  "license": "MIT",
+  "type": "library",
+  "require": {
+  },
+  "autoload": {
+    "psr-4": {
+      "Myaf\\Utils\\": "src/"
+    }
+  },
+  "minimum-stability": "dev"
+}
