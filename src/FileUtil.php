@@ -1,10 +1,10 @@
 <?php
 
-namespace Myaf\File;
+namespace Myaf\Utils;
 
 /**
- * Class File
- * @package Myaf\File
+ * Class FileUtil
+ * @package Myaf\Utils
  */
 final class FileUtil
 {
