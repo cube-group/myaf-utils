@@ -1,6 +1,6 @@
 <?php
 
-use Eoffcn\Libs\Utils\Strings;
+use Myaf\Utils\Strings;
 use PHPUnit\Framework\TestCase;
 
 /**
