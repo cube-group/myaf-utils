@@ -2,9 +2,6 @@
 
 namespace Myaf\Utils;
 
-use Myaf\Utils\CommonUtil;
-use Myaf\Utils\URLUtil;
-
 /**
  * Class LBasicAuth.
  * http参数基础验证类(仅基于秘钥).
