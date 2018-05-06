@@ -2,6 +2,7 @@
 [![Latest Stable Version](https://poser.pugx.org/cube-group/myaf-utils/version)](https://packagist.org/packages/cube-group/myaf-utils)
 [![Total Downloads](https://poser.pugx.org/cube-group/myaf-utils/downloads)](https://packagist.org/packages/cube-group/myaf-utils)
 [![License](https://poser.pugx.org/cube-group/myaf-utils/license)](https://packagist.org/packages/cube-group/myaf-utils)
+
 提供数组、字符串、地址解析等功能
 
 ## namespace
