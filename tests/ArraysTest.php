@@ -1,5 +1,4 @@
 <?php
-
 use Myaf\Utils\Arrays;
 use PHPUnit\Framework\TestCase;
 
@@ -11,6 +10,7 @@ class ArraysTest extends TestCase
 {
 
     /**
+     * 获取
      * @test
      */
     public function get()
@@ -29,6 +29,18 @@ class ArraysTest extends TestCase
         $this->assertEquals('cqh', Arrays::get($array, 'x.y.z'));
         //获取不存在的key
         $this->assertEquals(null, Arrays::get($array, 'test'));
+    }
+
+    /**
+     * @test
+     */
+    public function sGet()
+    {
+        $array = [
+            'name' => '0'
+        ];
+        //获取键name
+        $this->assertEquals('chenqionghe', Arrays::sGet($array, 'name', 'chenqionghe'));
     }
 
 
