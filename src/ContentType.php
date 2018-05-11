@@ -1,10 +1,10 @@
 <?php
 
-namespace libs\Utils;
+namespace Myaf\Utils;
 
 /**
  * Class ContentType
- * @package libs\Utils
+ * @package Myaf\Utils
  */
 class ContentType
 {
@@ -20,59 +20,59 @@ class ContentType
         // Determine Content Type
         switch ($ext) {
             case "ico":
-                $ctype = "image/x-icon";
+                $cType = "image/x-icon";
                 break;
             case "pdf":
-                $ctype = "application/pdf";
+                $cType = "application/pdf";
                 break;
             case "exe":
-                $ctype = "application/octet-stream";
+                $cType = "application/octet-stream";
                 break;
             case "zip":
-                $ctype = "application/zip";
+                $cType = "application/zip";
                 break;
             case "doc":
-                $ctype = "application/msword";
+                $cType = "application/msword";
                 break;
             case "xls":
             case "xlsx":
-                $ctype = "application/vnd.ms-excel";
+                $cType = "application/vnd.ms-excel";
                 break;
             case "ppt":
-                $ctype = "application/vnd.ms-powerpoint";
+                $cType = "application/vnd.ms-powerpoint";
                 break;
             case "gif":
-                $ctype = "image/gif";
+                $cType = "image/gif";
                 break;
             case "png":
-                $ctype = "image/png";
+                $cType = "image/png";
                 break;
             case "jpeg":
             case "jpg":
-                $ctype = "image/jpg";
+                $cType = "image/jpg";
                 break;
             case "css":
-                $ctype = "text/css";
+                $cType = "text/css";
                 break;
             case "js":
-                $ctype = "text/x-javascript";
+                $cType = "text/x-javascript";
                 break;
             case "html":
-                $ctype = "text/html";
+                $cType = "text/html";
                 break;
             case "txt":
             case "xml":
-                $ctype = "text/xml";
+                $cType = "text/xml";
                 break;
             default:
-                $ctype = "application/force-download";
+                $cType = "application/force-download";
                 break;
         }
 
 //        header("Pragma", "public"); // required 指明响应可被任何缓存保存
 //        header("Expires", "0");
 //        header("Cache-Control", "must-revalidate, post-check=0, pre-check=0");
-//        header("Content-Type", $ctype);
-        return $ctype;
+//        header("Content-Type", $cType);
+        return $cType;
     }
 }
