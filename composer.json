@@ -21,7 +21,8 @@
     "gregwar/captcha": "1.1.5",
     "gregwar/cache": "1.0.12",
     "bacon/bacon-qr-code": "^1.0.3",
-    "christian-riesen/otp": "2.5.0"
+    "christian-riesen/otp": "2.5.0",
+    "swiftmailer/swiftmailer": "5.4.9"
   },
   "autoload": {
     "psr-4": {
