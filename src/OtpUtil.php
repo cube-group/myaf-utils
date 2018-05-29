@@ -2,9 +2,8 @@
 
 namespace Myaf\Utils;
 
-use Otp\GoogleAuthenticator;
-use Otp\Otp;
-use ParagonIE\ConstantTime\Encoding;
+use OTPHP\TOTP;
+use ParagonIE\ConstantTime\Base32;
 
 /**
  * Class OtpUtil
@@ -13,6 +12,15 @@ use ParagonIE\ConstantTime\Encoding;
 class OtpUtil
 {
     /**
+     * 获取随机秘钥
+     * @return string
+     */
+    public static function getRandomSecret()
+    {
+        return trim(Base32::encodeUpper(random_bytes(32)), '=');
+    }
+
+    /**
      * 根据秘钥返回当前30秒范围内的TIME BASED OTP'S
      *
      * @param $secret string
@@ -20,21 +28,21 @@ class OtpUtil
      */
     public static function now($secret)
     {
-        $otp = new Otp();
-        return $otp->totp(Encoding::base32Decode($secret));
+        $otp = new TOTP(null, $secret);
+        return $otp->now();
     }
 
     /**
      * 根据秘钥判断6位验证码是否匹配.
      *
      * @param $secret string
-     * @param $code int
+     * @param $code int|string
      * @return bool
      */
     public static function verify($secret, $code)
     {
-        $otp = new Otp();
-        return $otp->checkTotp(Encoding::base32Decode($secret), (string)$code);
+        $otp = new TOTP(null, $secret);
+        return $otp->verify($code);
     }
 
     /**
@@ -44,8 +52,9 @@ class OtpUtil
      * @param $mail string
      * @return string
      */
-    public static function getGoogleOtpAuthUrl($secret, $mail)
+    public static function getOtpAuthUrl($secret, $mail)
     {
-        return GoogleAuthenticator::getQrCodeUrl('totp', $mail, $secret);
+        $otp = new TOTP($mail, $secret);
+        return $otp->getProvisioningUri();
     }
 }

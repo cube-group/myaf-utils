@@ -20,7 +20,7 @@
     "gregwar/image": "2.0.22",
     "gregwar/captcha": "1.1.5",
     "gregwar/cache": "1.0.12",
-    "bacon/bacon-qr-code": "^1.0.3",
+    "spomky-labs/otphp": "^8.3.2",
     "christian-riesen/otp": "2.5.0",
     "swiftmailer/swiftmailer": "5.4.9"
   },
