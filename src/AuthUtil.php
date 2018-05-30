@@ -3,11 +3,11 @@
 namespace Myaf\Utils;
 
 /**
- * Class LBasicAuth.
+ * Class AuthUtil.
  * http参数基础验证类(仅基于秘钥).
  * @package Myaf\Utils
  */
-class LBasicAuth
+class AuthUtil
 {
     /**
      * 秘钥.
