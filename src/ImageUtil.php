@@ -308,6 +308,7 @@ class ImageUtil
 
         @header('Content-Type: image/png');
         @readfile($sourceFile);
+        @unlink($sourceFile);
         return true;
     }
 
@@ -361,6 +362,7 @@ class ImageUtil
         if (!$outFile) {
             header('Content-type: ' . ContentType::getFileContentType($sourceFile));
             readfile($sourceFile);
+            @unlink($sourceFile);
         }
         return $result;
     }
