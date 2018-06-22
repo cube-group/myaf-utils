@@ -85,7 +85,7 @@ class Strings
      *
      * @param string $value 字符串
      * @param mixed $func 要递归处理的函数名
-     * @return array|int
+     * @return array
      */
     public static function parseMultiValue($value, $func = '')
     {
